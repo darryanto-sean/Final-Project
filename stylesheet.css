@@ -1,0 +1,716 @@
+body, html{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-width: 1000px;
+	/*max-width: 1334px;*/
+	background-size: 100%;
+	background-image: url("../images/Sunlight.jpg");
+	background-attachment: fixed;
+	position: absolute;
+ 	left: 0; right: 0; 
+	margin: auto;
+}
+
+.header{
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: white;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	z-index: 100;
+	display: table;
+}
+
+.header-text{
+	font-size: 18px;
+	font-family: 'Roboto';
+	font-weight: 100;
+	color: black;
+}
+
+#info-triangle{
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-top: 25px solid transparent;
+	border-bottom: 25px solid white; 
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 2px;
+}
+
+#hovered-text{
+	height: 15px;
+	width: 100px;
+	display: none;
+	font-family: 'Poiret One';
+	font-size: 15px;
+	color: white;
+	position: relative;
+	left: 5px;
+	top: 5px;
+	text-decoration: none;
+}
+
+#info-triangle:hover #hovered-text{
+	display: block;
+}
+
+.modal-display{
+	position: fixed;
+	font-family: 'Raleway';
+	font-size: 20px;
+	top: 0; left: 0; bottom: 0; right: 0;
+	z-index: 999;
+	background: rgb(0, 0, 0, 0.9);
+	transition: linear 1s;
+	pointer-events: none;
+	opacity: 0;
+}
+
+.modal-display:target{
+	opacity: 1;
+	pointer-events: auto;
+}
+
+#modal-content{
+	width: 70%;
+	height: 70%;
+	margin: 10% auto;
+	background: #F19A3E;
+}
+
+#modal-head{
+	font-family: 'Roboto';
+	font-size: 40px;
+	position: relative;
+	top: 10%;
+	text-align: center;
+	color: white;
+}
+
+#logo{
+	width: 50%;
+	height: 50%;
+}
+
+#monica{
+	font-size: 15px;
+	font-family: 'Roboto';
+	color: white;
+	position: relative;
+	bottom: -15px;
+	left: 10px;
+	opacity: 0.5;
+}
+
+.close{
+	position: relative;
+	margin: 4px;
+}
+
+#email-box{
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#github-handle{
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 10px;
+	color: black;
+}
+
+#linkedin-handle{
+	position: absolute;
+	top: 0;
+	right: 34px;
+	margin: 10px;
+	color: black;
+}
+
+#resume-handle{
+	position: absolute;
+	top: 0;
+	right: 68px;
+	margin: 10px;
+	color: black;
+}
+
+#header-space{
+	height: 50px;
+	width: 100%;
+}
+
+.page{
+	width: 100vw;
+	/*max-width: 1336px;*/
+	/*min-width: 1210px;*/
+	height: calc(100vh - 50px);
+	/*min-height: 100%;*/
+	position: relative;
+}
+
+#splash{
+	background-color: transparent;
+}
+
+#center-box{
+	background-color: black;
+	width: 40%;
+	height: 40%;
+ 	overflow: auto;
+ 	margin: auto;
+  	position: absolute;
+  	top: 0; left: 0; bottom: 0; right: 0;
+  	display: table;
+}
+
+#headline{
+	text-align: center;
+	font-size: 35px;
+	font-family: 'Poiret One';
+	color: #94FFED;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.down{
+	margin: 10px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+}
+
+.down:hover{
+	cursor: pointer;
+	color: white;
+	transition: linear .2s;
+}
+
+.up{
+	margin: 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+}
+
+.up:hover{
+	cursor: pointer;
+	color: white;
+	transition: linear .2s;
+}
+
+
+#main{
+	background-color: #F3FF87;
+}
+
+#main-img{
+	height: 33%;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	margin: auto;
+	border: 10px solid #F3FF87;
+	z-index: 100;
+}
+
+.box{
+	height: calc(50% - 15px);
+	width: calc(50% - 15px);
+	margin: 10px;
+	position: absolute;
+	font-size: 1.5vw;
+	font-family: 'Roboto';
+	font-weight: 100;
+}
+
+#top-left{
+	top: 0;
+	left: 0;
+	background-color: #E87A5A;
+	transition-duration: 0.5s;
+}
+
+#top-left:hover{
+	cursor: pointer;
+	background-color: #E68D73;
+	transition-duration: 0.5s;
+}
+
+#top-right{
+	top: 0;
+	right: 0;
+	background-color: #D3BDB0;
+}
+
+#top-right:hover{
+	cursor: pointer;
+	background-color: #DEC8BA;
+	transition-duration: 0.5s;
+}
+
+#bottom-left{
+	bottom: 0;
+	left: 0;
+	background-color: #C1FBFF;
+}
+
+#bottom-left:hover{
+	cursor: pointer;
+	background-color: #E3FBFC;
+	transition-duration: 0.5s;
+}
+
+#bottom-right{
+	bottom: 0;
+	right: 0;
+	background-color: #A4D4B4;
+}
+
+#bottom-right:hover{
+	cursor: pointer;
+	background-color: #B9EFCE;
+	transition-duration: 0.5s;
+}
+
+#top-left p{
+	margin: .8em;
+	position: absolute;
+	left: 0;
+}
+
+#top-right p{
+	margin: .8em;
+	position: absolute;
+	right: 0;
+}
+
+#bottom-left p{
+	margin: .8em;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+#bottom-right p{
+	margin: .8em;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+#about-me{
+	background-color: #F3FF87;
+	display: table;
+}
+
+#background-animated{
+	position: absolute;
+	width: 1px; height: 1px;
+	background-color: #E87A5A;
+	top: 0; right: 0; bottom: 0; left: 0;
+	margin: auto;
+	opacity: 0;
+}
+
+#about-me-info{
+	display: none;
+	width: 450px;
+	position: relative;
+	top: 60px;
+	left: 40px;
+	font-size: 20px;
+	font-family: 'Open Sans Condensed';
+	font-weight: 300;
+	line-height: 35px;
+	color: white;
+}
+
+#about-me-header{
+	display: none;
+	position: relative;
+	top: 30px;
+	font-size: 40px;
+	font-family: 'Open Sans Condensed';
+	font-weight: 300;
+	line-height: 35px;
+	text-align: center;
+	color: white;
+}
+
+.about-me-circ{
+	width: 225px;
+	height: 225px;
+	border-radius: 60%;
+	background-color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: 135%;
+	display: none;
+}
+
+#img1{
+	top: 175px;
+	left: 550px;
+	background-image: url("../images/Countdown-Lit.jpg");
+}
+
+#img2{
+	top: 350px;
+	left: 760px;
+	background-size: 100%;
+	background-image: url("../images/Twin-Peaks.jpg")
+}
+
+#img3{
+	top: 175px;
+	left: 980px;
+	background-size: 145%;
+	background-image: url("../images/Milan.jpg")
+}
+
+#hobbies{
+	background-color: #C8D6E3;
+}
+
+#hobbies-box{
+	width: 1332px;
+	height: 98%;
+	background-color: #D3BDB0;
+	position: absolute;
+	top: 0; left: -2900px; bottom: 0; right: 0;
+	margin: auto;
+}
+
+#hobbies-title{
+	display: none;
+	font-family: 'Open Sans Condensed';
+	font-size: 90px;
+	color: white;
+	-webkit-transform: rotate(90deg); 
+    -moz-transform: rotate(90deg); 
+    -ms-transform: rotate(90deg); 
+    -o-transform: rotate(90deg); 
+    transform: rotate(90deg);
+    position: absolute;
+    left: -80px;
+    top: 70px;
+}
+
+#hobbies-content{
+	font-family: 'Open Sans Condensed';
+	font-size: 25px;
+	color: white;
+	position: absolute;
+	left: 100px;
+	display: none;
+}
+
+.hobby{
+	width: 250px;
+	height: 500px;
+	position: absolute;
+}
+
+#hobby1{
+	top: -20px;
+	left: 140px;
+	opacity: 0;
+}
+
+#hobby2{
+	top: -20px;
+	left: 410px;
+	opacity: 0;
+}
+
+#hobby3{
+	top: -20px;
+	left: 680px;
+	opacity: 0;
+}
+
+#hobby4{
+	top: -20px;
+	left: 950px;
+	opacity: 0;
+}
+
+.hobbyImg{
+	width: 90%;
+	height: calc(250px * 0.9);
+	border-radius: 50%;
+	background-color: red;
+	position: relative;
+	margin: auto;
+	margin-top: 10px;
+}
+
+#hobbyImg1{
+	background-image: url(../images/InsomniacRare.jpg);
+	background-size: 160%;
+}
+
+#hobbyImg2{
+	background-image: url(../images/MtHigh.jpg);
+	background-size: 130%;
+}
+
+#hobbyImg3{
+	background-image: url(../images/Jhene.jpg);
+	background-size: 150%;
+}
+
+#hobbyImg4{
+	background-image: url(../images/Cooking.jpg);
+	background-size: 100%;
+}
+
+.hobbyDesc{
+	position: relative;
+	margin: auto;
+	margin-top: 20px;
+	width: 90%;
+	text-align: center;
+	font-family: 'Open Sans Condensed';
+	font-size: 20px;
+	color: white;
+}
+
+#skills{
+	background-color: #FF101F;
+}
+
+#skills-box{
+	width: 0;
+	height: 98%;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	margin: auto;
+	background-color: #C1FBFF;
+}
+
+#skills-title{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	bottom: 0;
+	display: none;
+	color: #FF101F;
+	font-family: 'Open Sans Condensed';
+	font-size: 120px;
+	z-index: 1;
+}
+
+.skills-box{
+	width: calc(50% - 40px);
+	height: calc(50% - 40px);
+	background-color: rgba(255, 255, 255, 0.4);
+	position: absolute;
+	margin: 5px;
+}
+
+#skill-java{
+	position: absolute;
+	margin-left: -80px;
+	margin-top: 20px;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+#skill-html-css{
+	position: absolute;
+	margin-left: -80px;
+	margin-bottom: 20px;
+	bottom: 0px;
+	left: 0;
+	opacity: 0;
+}
+#skill-swift{
+	position: absolute;
+	margin-left: -80px;
+	margin-top: 20px;
+	opacity: 0;
+	top: 0;
+	right: 0;
+}
+#skill-javascript{
+	position: absolute;
+	margin-left: -80px;
+	margin-bottom: 20px;
+	opacity: 0;
+	bottom: 0px;
+	right: 0;
+}
+
+.skills-img{
+	height: 180px;
+	width: 180px;
+	float: left;
+	border-radius: 0;
+	margin: 10px;
+}
+
+.skills-desc{
+	margin-top: 10px;
+	margin-right: 6px;
+	color: black;
+	font-family: 'Open Sans Condensed';
+	font-size: 18px;
+}
+
+#java-img{
+	background-image: url("../images/Centennial.jpeg");
+	background-size: 190%;
+}
+
+#swift-img{
+	background-image: url("../images/flappy-sean.jpg");
+	background-size: 160%;
+}
+
+#html-css-img{
+	background-image: url("../images/html-css.jpg");
+	background-size: 160%;
+}
+
+#javascript-img{
+	background-image: url("../images/hackathon.jpg");
+	background-size: 160%;	
+}
+
+#experience{
+	background-color: #7C7C7C;
+}
+
+#experience-box{
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	margin: auto;
+	width: 1332px;
+	height: 98%;
+	background-color: #A4D4B4;
+	font-family: 'Open Sans Condensed';
+	display: none;
+}
+
+#experience-title{
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	width: 300px;
+	height: 70px;
+	margin: auto;
+	text-align: center;
+	font-size: 60px;
+	color: #7C7C7C;
+}
+
+.experience-elements{
+	width: 46%;
+	height: 48vh;
+	position: absolute;
+	float: left;
+}
+
+#exp1{
+	top: 5px;
+	left: 5px;
+}
+
+#exp2{
+	top: 5px;
+	right: 5px;
+}
+
+#exp3{
+	bottom: 5px;
+	left: 5px;
+}
+
+#exp4{
+	bottom: 5px;
+	right: 5px;
+}
+
+#hackcc-img{
+	top: 0;
+	left: 0;
+}
+#atthackathon-img{
+	top: 0;
+	right: 0;
+}
+#html-img{
+	bottom: 0;
+	left: 0;
+}
+#atthackathon2-img{
+	bottom: 0;
+	right: 0;
+}
+
+.exp-img{
+	width: 100%;
+	height: 100%;
+}
+
+.exp-img-box{
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	float: left;
+}
+
+
+.exp-bio{
+	font-size: 15px;
+	position: relative;
+}
+#hackcc-bio{
+	margin-left: 250px;
+	margin-top: 20px;
+}
+#html-bio{
+	margin-left: 250px;
+	margin-bottom: 20px;
+	bottom: 0;
+	position: absolute;
+}
+#att-bio{
+	margin-right: 230px;
+	margin-top: 20px;
+	text-align: right;
+}
+#atthack-bio{
+	margin-right: 230px;
+	margin-bottom: 20px;
+	text-align: right;
+	bottom: 0;
+	position: absolute;
+}
+
+#bottom-bar{
+	background-color: #394940;
+	width: 100%;
+	height: 120px;
+	text-align: center;
+}
+
+#blog-handle{
+	margin-top: 30px;
+	color: white;
+}
+
+
